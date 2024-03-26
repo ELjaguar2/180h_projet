@@ -62,6 +62,18 @@
             color: #333; /* Texte gris */
             text-decoration: none; /* Supprimer la soulignement du lien */
         }
+
+        /* Styles pour une mise en page réactive */
+        @media only screen and (max-width: 600px) {
+            /* Réduire la taille de la police pour les petits écrans */
+            .bandeau h1 {
+                font-size: 18px;
+            }
+
+            .contenu p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -71,14 +83,14 @@
     </div>
     
     <div class="contenu">
-        <p> Voici l'organisaton des salles pour aujourd'hui : (Y)</p>
+        <p> Voici l'organisation des salles pour aujourd'hui : (Y)</p>
         <img src="emploi_du_temps.png" alt="image cotcot">
     </div> 
 
     <div class="bandeau-bas">
         <p> <a href="https://citescolairebroceliande.fr/">@copyright</a></p>
     </div>
-	<script>
+    <script>
         function redirectToLoginPage() {
             // Rediriger vers la page de login
             window.location.href = "2-page_login.html";
