@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brocéliande</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Gris plus clair */
+            color: #333; /* Texte gris */
+            text-align: center; /* Centrage du contenu */
+        }
+
+        .bandeau {
+            background-color: #ffb347; /* Jaune orangé pastel */
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            position: relative; /* Position relative pour positionner le bouton */
+        }
+
+        .bandeau h1 {
+            margin: 0;
+            color: #333; /* Texte gris */
+        }
+
+        .contenu {
+            padding: 20px;
+        }
+
+        .contenu p {
+            color: #333; /* Texte gris */
+        }
+
+        .bouton-login {
+            background-color: #ffb347; /* Jaune orangé pastel */
+            color: #333; /* Texte gris */
+            padding: 10px 20px;
+            border: 1px solid #ccc; /* Contour grisé */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute; /* Position absolue pour placer le bouton */
+            right: 20px; /* Décalage à gauche */
+            top: 50%; /* Positionnement vertical au milieu */
+            transform: translateY(-50%); /* Ajustement pour centrer verticalement */
+        }
+
+        .bouton-login:hover {
+            background-color: #ffa500; /* Jaune orangé plus vif au survol */
+        }
+
+        .bandeau-bas {
+            background-color: #b0e0e6; /* Cyan pastel */
+            padding: 20px;
+        }
+
+        .bandeau-bas a {
+            color: #333; /* Texte gris */
+            text-decoration: none; /* Supprimer la soulignement du lien */
+        }
+    </style>
+</head>
+<body>
+    <div class="bandeau">
+        <button class="bouton-login" onclick="redirectToLoginPage()">Login</button>
+        <h1>Salut</h1>
+    </div>
+    
+    <div class="contenu">
+        <p>Petit moment de culture Cyber avec les BTS :</p>
+        <img src="logo_COCO.png" alt="image cotcot">
+    </div>
+
+    <div class="bandeau-bas">
+        <p> <a href="https://citescolairebroceliande.fr/">@copyright</a></p>
+    </div>
+	<script>
+        function redirectToLoginPage() {
+            // Rediriger vers la page de login
+            window.location.href = "2-page_login.html";
+        }
+    </script>
+</body>
+</html>
