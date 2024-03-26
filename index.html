@@ -45,10 +45,9 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
             cursor: pointer;
             transition: background-color 0.3s ease;
-            position: absolute; /* Position absolue pour placer le bouton */
-            right: 20px; /* Décalage à gauche */
-            top: 50%; /* Positionnement vertical au milieu */
-            transform: translateY(-50%); /* Ajustement pour centrer verticalement */
+            position: fixed; /* Position fixe pour placer le bouton */
+            right: 20px; /* Décalage à droite par défaut */
+            top: 20px; /* Décalage en haut par défaut */
         }
 
         .bouton-login:hover {
@@ -76,13 +75,18 @@
                 font-size: 16px;
             }
 
+            /* Réduire la taille de l'image pour les petits écrans */
+            .contenu img {
+                max-width: 100%; /* Pour assurer que l'image ne dépasse pas la largeur de l'écran */
+                height: auto; /* Pour conserver les proportions de l'image */
+            }
+
             /* Centrer le bouton sur les petits écrans */
             .bouton-login {
                 right: auto;
                 left: 50%;
                 transform: translateX(-50%);
-                top: auto;
-                bottom: 20px;
+                top: 10px; /* Nouvelle position en haut */
             }
         }
     </style>
