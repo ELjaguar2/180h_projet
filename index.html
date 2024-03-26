@@ -24,6 +24,7 @@
         .bandeau h1 {
             margin: 0;
             color: #333; /* Texte gris */
+            font-size: 24px; /* Taille de police pour les grands écrans */
         }
 
         .contenu {
@@ -32,6 +33,7 @@
 
         .contenu p {
             color: #333; /* Texte gris */
+            font-size: 18px; /* Taille de police pour les grands écrans */
         }
 
         .bouton-login {
@@ -67,11 +69,20 @@
         @media only screen and (max-width: 600px) {
             /* Réduire la taille de la police pour les petits écrans */
             .bandeau h1 {
-                font-size: 18px;
+                font-size: 20px;
             }
 
             .contenu p {
                 font-size: 16px;
+            }
+
+            /* Centrer le bouton sur les petits écrans */
+            .bouton-login {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                top: auto;
+                bottom: 20px;
             }
         }
     </style>
