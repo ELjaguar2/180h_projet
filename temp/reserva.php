@@ -39,9 +39,23 @@
             $salles_array[] = $row_salles["numero_salle"];
         }
 
-        // Création du tableau pour afficher les emplois du temps
+        // Horaires à afficher
+        $horaires = array("08:30", "09:30", "10:30", "11:40", "12:30", "13:00", "13:45", "14:45", "15:55", "16:55", "17:50");
+
+        // Tableau pour afficher les horaires
+        echo "<h2>Horaires</h2>";
         echo "<table>";
-        echo "<tr><th>Horaire</th>";
+        echo "<tr><th>Horaire</th></tr>";
+
+        foreach ($horaires as $horaire) {
+            echo "<tr>";
+            echo "<td>$horaire</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+
+        // Tableau pour afficher les salles
+        echo "<table>";
 
         // Liste des salles
         foreach ($salles_array as $salle) {
@@ -49,20 +63,16 @@
         }
         echo "</tr>";
 
-        // Horaires à afficher
-        $horaires = array("08:30", "09:30", "10:30", "11:40", "12:30", "13:00", "13:45", "14:45", "15:55", "16:55", "17:50");
-
-        // Remplissage du tableau avec les horaires et les salles
-        foreach ($horaires as $horaire) {
+         // 10 lignes vides
+        for ($i = 0; $i < 10; $i++) {
             echo "<tr>";
-            echo "<td>$horaire</td>";
-
+            /* echo "<td></td>"; */ // Cellule vide dans la première colonne
             foreach ($salles_array as $salle) {
-                echo "<td></td>"; // Cellule vide pour chaque salle
+                echo "<td></td>"; // Cellules vides pour chaque salle
             }
-
             echo "</tr>";
         }
+ 
         echo "</table>";
     } else {
         echo "Aucune salle trouvée dans la base de données.";
